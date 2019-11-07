@@ -5,13 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello ${name} !</h1>
+<h1>Hello!</h1>
 
 <c:forEach var="items" items="${tasks}">
 
-    ${items}
+    ${items.id}
+    ${items.summary}
+    ${items.startDate}
+    ${items.endDate}
+    ${items.assignee}
 
-</c:forEach>
+
+   </c:forEach>
 
 
 </body>

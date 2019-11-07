@@ -1,10 +1,12 @@
-package by.rubakhin.entity;
+package by.rubakhin.database;
+
+import by.rubakhin.entity.Tasks;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbUtil {
+public class ConnectionDB {
 
     public static List<Tasks> getTasksList(){
 
@@ -40,16 +42,6 @@ public class DbUtil {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-
-
-/*
-          Connection  con = DriverManager.getConnection(url, userName, password);
-          Statement stmt = con.createStatement();
-          ResultSet rs = stmt.executeQuery("SELECT * FROM tasks");
-*/
-
 
 
         return tasks;
