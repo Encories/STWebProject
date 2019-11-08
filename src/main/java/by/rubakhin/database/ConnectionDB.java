@@ -48,9 +48,9 @@ public class ConnectionDB {
     }
 
 
-    private static PreparedStatement createPreparedStatement(Connection con /*, int userId*/) throws SQLException {
-     //   String sql = "SELECT id, username FROM users WHERE id = ?";
-        String sql = "SELECT * FROM tasks";
+    private static PreparedStatement createPreparedStatement(Connection con /*, String assignee*/) throws SQLException {
+        String sql = "SELECT * FROM tasks WHERE assignee = ?";
+     //   String sql = "SELECT * FROM tasks";
 
         PreparedStatement ps = con.prepareStatement(sql);
     //    ps.setInt(1, userId);
